@@ -1,3 +1,4 @@
+# Download the latest mtgscan.exe
 [![Download EXE](https://img.shields.io/github/v/release/AngryMunky/mtg-collection-enricher?label=Download%20EXE&logo=windows&style=for-the-badge)](https://github.com/AngryMunky/mtg-collection-enricher/releases/latest/download/mtgscan.exe)
 
 
