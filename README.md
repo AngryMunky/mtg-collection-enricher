@@ -1,3 +1,6 @@
+[![Download EXE](https://img.shields.io/github/v/release/AngryMunky/mtg-collection-enricher?label=Download%20EXE&logo=windows&style=for-the-badge)](https://github.com/AngryMunky/mtg-collection-enricher/releases/latest/download/mtgscan.exe)
+
+
 # MTG Collection Enricher GUI  — v 2.75
 
 A Windows desktop tool that enriches a ManaBox export with full Scryfall data and
