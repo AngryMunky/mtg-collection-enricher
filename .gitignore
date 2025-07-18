@@ -1,0 +1,7 @@
+# build artefacts
+build/
+dist/
+*.spec
+*.exe
+__pycache__/
+*.pyc
