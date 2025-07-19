@@ -24,13 +24,13 @@ jobs:
       - name: Build EXE
         run: >
           pyinstaller --onefile --windowed
+          --icon mtg.ico
           --add-data "card_back.jpg;."
           mtgscan.py
 
-      - name: Upload EXE to release
+      - name: Upload EXE to GitHub release
         uses: softprops/action-gh-release@v2
         with:
           files: dist/mtgscan.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
