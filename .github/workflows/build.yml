@@ -1,13 +1,10 @@
 name: Build EXE
-
 on:
   push:
-    tags: ["v*"]
-
+    tags: ["v*"]          # triggers only when you push a tag that starts with v
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -16,19 +13,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
           pip install -r requirements.txt
           pip install pyinstaller
-
       - name: Build EXE
         run: >
           pyinstaller --onefile --windowed
           --icon mtg.ico
           --add-data "card_back.jpg;."
           mtgscan.py
-
-      - name: Upload EXE to GitHub release
+      - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
           files: dist/mtgscan.exe
