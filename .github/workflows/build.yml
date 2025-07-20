@@ -1,31 +1,48 @@
-name: Build EXE
+name: Build & Release EXE
+
+permissions:
+  contents: write
+
 on:
   push:
-    tags: ["v*"]          # triggers only when you push a tag that starts with v
+    tags:
+      - 'v*.*.*'
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: '3.x'
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install pandas openpyxl pillow requests
+
+      - name: Install PyInstaller
+        run: |
           pip install pyinstaller
-      - name: Build EXE
-        run: >
-          pyinstaller --onefile --windowed
-          --icon mtg.ico
-          --add-data "card_back.jpg;."
-          mtgscan.py
-      - name: Upload to release
+
+      - name: Build executable with PyInstaller
+        run: |
+          pyinstaller --onefile --windowed --icon=mtg.ico mtgscan.py
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mtg-collection-enricher-exe
+          path: dist/mtgscan.exe
+
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.ref_name }}
           files: dist/mtgscan.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
