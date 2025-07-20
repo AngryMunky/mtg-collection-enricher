@@ -20,6 +20,12 @@ Features include:
 |--------------|
 | Card Name • Color • Rarity • Mana Value • **Card** • **Type** • Set Name • Foil • Quantity • Collector Number • ManaBox ID • Scryfall ID |
 
+## UI preview
+![Enricher GUI Screenshot](assets/MTG_Collection_Enricher.png)
+
+## .xlsx Output Example
+![xlsx Output Example](assets/xlsx_example.png)
+
 ## 🖥️ Quick Start (from source)
 <pre><code>git clone https://github.com/AngryMunky/mtg-collection-enricher.git
 cd mtg-collection-enricher
