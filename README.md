@@ -39,4 +39,3 @@ Features include:
 - Bulk Scryfall DB auto-download/update  
 - Split type columns, set name, autosizing  
 - Status log + progress bar
-    
