@@ -21,12 +21,22 @@ Features include:
 | Card Name • Color • Rarity • Mana Value • **Card** • **Type** • Set Name • Foil • Quantity • Collector Number • ManaBox ID • Scryfall ID |
 
 ---
+## 🖥️ Patch Notes
+### v2.80.5
+- **Download EXE** badge added to README  
+- Switched to actions/upload-artifact@v4 in CI  
+- Granted GitHub Action permission to create Releases  
 
-## 🖥️ Quick Start (from source)
+### v2.80.1–v2.80.4
+- UI refinements: separate input/output browse fields  
+- DB controls: display version, “Download” / “Update” buttons, progress & ETA logs  
+- Power/Toughness split columns, numeric formatting  
+- EXE icon support & PyInstaller one-file build  
 
-```bash
-git clone https://github.com/<your-username>/mtg-collection-enricher.git
-cd mtg-collection-enricher
-pip install -r requirements.txt      # pillow, pandas, openpyxl, requests
-python mtgscan.py
-
+### v2.75
+- Initial GitHub release  
+- Random card image cycling  
+- Bulk Scryfall DB auto-download/update  
+- Split type columns, set name, autosizing  
+- Status log + progress bar
+    
