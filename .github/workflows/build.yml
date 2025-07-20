@@ -34,7 +34,7 @@ jobs:
           pyinstaller --onefile --windowed --icon=mtg.ico mtgscan.py
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mtg-collection-enricher-exe
           path: dist/mtgscan.exe
