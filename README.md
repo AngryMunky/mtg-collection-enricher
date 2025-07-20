@@ -1,8 +1,8 @@
 # Download the latest mtgscan.exe
-[![Download EXE](https://img.shields.io/github/v/release/AngryMunky/mtg-collection-enricher?label=Download%20EXE&logo=windows&style=for-the-badge)](https://github.com/AngryMunky/mtg-collection-enricher/releases/latest/download/mtgscan.exe)
+[![Download EXE](https://img.shields.io/github/v/release/AngryMunky/mtg-collection-enricher?label=Download%20EXE)](https://github.com/AngryMunky/mtg-collection-enricher/releases/latest/download/mtgscan.exe)
 
 
-# MTG Collection Enricher GUI  — v 2.75
+# MTG Collection Enricher GUI
 
 A Windows desktop tool that enriches a ManaBox export with full Scryfall data and
 creates a filter-ready Excel workbook (one sheet, drop-down filters on every
