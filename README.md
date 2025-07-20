@@ -20,8 +20,13 @@ Features include:
 |--------------|
 | Card Name • Color • Rarity • Mana Value • **Card** • **Type** • Set Name • Foil • Quantity • Collector Number • ManaBox ID • Scryfall ID |
 
+## 🖥️ Quick Start (from source)
+<pre><code>git clone https://github.com/AngryMunky/mtg-collection-enricher.git
+cd mtg-collection-enricher
+pip install -r requirements.txt
+python mtgscan.py</code></pre>
 ---
-## 🖥️ Patch Notes
+## 📒 Patch Notes
 ### v2.80.5
 - **Download EXE** badge added to README  
 - Switched to actions/upload-artifact@v4 in CI  
